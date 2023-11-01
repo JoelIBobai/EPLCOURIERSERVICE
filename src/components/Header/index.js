@@ -1,27 +1,31 @@
 import React from "react";
 import Head from "./Head";
+import { Link } from "react-router-dom";
 import "./index.css";
 
-
 const Index = () => {
-    return (
-        <>
-        <Head />
-        <div className="toggle-button">
-      <span className="toggle-button-icon" id="t-btn">&#9776;</span>
-    </div>
-    <nav>
-  <div className="navigation" id="nav">
-    <a href="#track">Track</a>
-    <a href="#services">Ship</a>
-    <a id="service-link" href="#help">Customer Service</a>
-    <a id="location-link" href="">Location</a>
-  </div>
-</nav>
+  return (
+    <>
+      <Head />
+      <div className="toggle-button">
+        <span className="toggle-button-icon" id="t-btn">
+          &#9776;
+        </span>
+      </div>
+      <nav>
+        <div className="navigation" id="nav">
+          <Link to="/">Track</Link>
+          <Link to="/">Ship</Link>
+          <Link to="/" id="service-link">
+            Customer Service
+          </Link>
+          <Link to="/" id="location-link">
+            Location
+          </Link>
+        </div>
+      </nav>
+    </>
+  );
+};
 
-        </>
-        );
-    };
-    
-    export default Index;
-    
+export default Index;
