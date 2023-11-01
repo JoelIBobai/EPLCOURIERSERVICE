@@ -23,7 +23,10 @@ const router = createBrowserRouter([
       // { path: "*", element: <Navigate to="/404" replace /> },
     ],
   },
- 
+ {
+    path: "/app",
+    element: <Navigate to="/" replace />,
+  },
 ]);
 
 function App() {
