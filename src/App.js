@@ -7,6 +7,7 @@ import {
 import OrderTracking from "./pages/OrderTracking";
 import DashboardLayout from "./layouts/dashboard";
 import GeneralApp from "./pages/GeneralApp";
+import Page404 from "./pages/Page404";
 import "./App.css";
 const router = createBrowserRouter([
   {
@@ -19,10 +20,11 @@ const router = createBrowserRouter([
       // { path: "activity", element: <Activity /> },
       // { path: "card", element: <Card /> },
 
-      // { path: "404", element: <Page404 /> },
-      // { path: "*", element: <Navigate to="/404" replace /> },
+      { path: "404", element: <Page404 /> },
+      { path: "*", element: <Navigate to="/404" replace /> },
     ],
   },
+  { path: "*", element: <Navigate to="/404" replace /> },
   {
     path: "app",
     element: <Navigate to="/" replace />,
